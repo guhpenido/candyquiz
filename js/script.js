@@ -31,7 +31,7 @@ function fecharModalDois() {
 
 
 function irParaMenu() {
-    window.location.href = "/menu.html";
+    window.location.href = "menu.html";
 }
 
 /*------------MENU----------------*/
