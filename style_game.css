@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+body {
+    margin: 0;
+}
+
+.tela-menu {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    display: none;
+}
+
+video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+audio {
+    display: none;
+}
+
+.menu {
+    color: #FFF;
+    margin-left: 4em;
+    text-transform: uppercase;
+}
+
+.menu h1 {
+    font-size: 4em;
+    letter-spacing: 30px;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.menu h3 {
+    font-weight: 300;
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 10px;
+    position: relative;
+}
+
+.menu h3::before,
+.menu h3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFF;
+    width: 3em;
+    height: 3px;
+}
+
+.menu h3::before {
+    left: 0;
+}
+
+.menu h3::after {
+    right: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 1em 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 700;
+}
+
+#som {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1em;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.menu li a:hover,
+#som:hover {
+    color: #dbdbdb;
+}
+
+@media screen and (max-device-width: 768px) {
+    .menu h1 {
+        font-size: 2em;
+    }
+    .menu h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-device-width: 500px) {
+    .menu h1 {
+        letter-spacing: 5px;
+    }
+    .menu h3::before,
+    .menu h3::after {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 450px) {
+    .tela,
+    video {
+        height: 35em;
+    }
+}
+
+.virado {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.tela-personagem {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    display: none;
+}
+
+.sair {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/*#sem-personagem {
+    position: absolute;
+    right: 9em;
+    top: 0;
+    margin: 1em;
+    color: #FFF;
+    cursor: pointer;
+    width: 60px;
+    border: 2px solid #CB6DD9;
+}*/
+
+.personagem-topo {
+    position: absolute;
+    right: 5px;
+    top: 1em;
+    font-family: 'Comfortaa', cursive;
+    padding: 2px;
+    width: 9.5em;
+}
+
+.cabecalho {
+    display: none;
+}
+
+.personagem-topo img {
+    position: absolute;
+    right: 10em;
+    top: 0;
+    margin: 1;
+    color: #FFF;
+    cursor: pointer;
+    width: 60px;
+}
+
+.personagem-topo h1 {
+    font-size: 15px;
+    margin: 0;
+    color: #CB6DD9;
+}
+
+.personagem-topo h2 {
+    font-size: 12px;
+    margin: 0;
+    color: #FF708F;
+}
+
+.personagem-topo h3 {
+    font-size: 10px;
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% {
+        width: 150px;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        width: 150px;
+    }
+}
+
+.personagem {
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translatex(-50%);
+}
+
+.personagem img {
+    width: 200px;
+    margin-top: 10px;
+    animation: pulse 1s linear infinite;
+}
+
+.selecao {
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px;
+    grid-column-gap: 35px;
+    grid-row-gap: 25px;
+    justify-items: stretch;
+    align-items: stretch;
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+}
+
+#item-a {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+#item-b {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+#item-c {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+#item-d {
+    grid-column: 4 / 4;
+    grid-row: 1 / 2;
+}
+
+#item-e {
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
+}
+
+#item-f {
+    grid-column: 2 / 4;
+    grid-row: 2 / 2;
+}
+
+#item-g {
+    grid-column: 3 / 4;
+    grid-row: 2 / 2;
+}
+
+#item-a img,
+#item-b img,
+#item-c img,
+#item-d img,
+#item-e img,
+#item-f img,
+#item-g img {
+    width: 80px;
+    height: 80px;
+    /*border: 1px solid rgb(48, 45, 45);*/
+    padding: 2px;
+    cursor: pointer;
+}
+
+#item-a img:hover,
+#item-b img:hover,
+#item-c img:hover,
+#item-d img:hover,
+#item-e img:hover,
+#item-f img:hover,
+#item-g img:hover {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #CB6DD9;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.habilidades {
+    position: absolute;
+    left: 2.5%;
+    top: 10%;
+}
+
+.habilidade {
+    width: 35%;
+    height: 30%;
+    background-color: #f4b8b8c7;
+    border-radius: 12px;
+    font-family: 'Comfortaa', cursive;
+    padding: 1px;
+}
+
+.habilidade i {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 30px;
+    color: #CB6DD9;
+}
+
+.habilidade h1 {
+    text-align: center;
+    font-weight: 10000;
+    font-size: 35px;
+    margin: 0;
+    color: #FF708F;
+}
+
+.habilidade p {
+    text-align: center;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.habilidade h2 {
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+    color: #CB6DD9;
+}
+
+#caramelo,
+#chocolate,
+#confete,
+#cupcake,
+#geladinho,
+#jujuba,
+#raspadinha {
+    display: none;
+}
+
+.selecionar button {
+    outline: none;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+    background: #CB6DD9;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 90%;
+    right: 2%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: none;
+}
+
+.selecionar button:hover {
+    color: #CB6DD9;
+    background-color: #FFF;
+    border-color: #CB6DD9;
+}
+
+
+/*-------------------------------------------------*/
+
+.tela-mapa {
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FBBF9D;
+    display: none;
+}
+
+.conteudo-mapa {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.conteudo-mapa .retangulo {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0e, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    margin-top: 90px;
+}
+
+.conteudo-mapa .retangulo .conteudo-retangulo {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.conteudo-mapa .retangulo:hover .conteudo-retangulo {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.conteudo-mapa .retangulo .conteudo-retangulo h2 {
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+.conteudo-mapa .retangulo .conteudo-retangulo h3 {
+    font-size: 1.8em;
+    color: #FFF;
+    z-index: 1;
+}
+
+.conteudo-mapa .retangulo .conteudo-retangulo p {
+    font-size: 1em;
+    color: #FFF;
+    font-weight: 300;
+}
+
+.conteudo-mapa .retangulo .conteudo-retangulo a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #FFF;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+#mapa-um {
+    background: url(imgs/mapas/mapa-cupcake3.jpeg);
+}
+
+#mapa-dois {
+    background: url(imgs/mapas/mapa-praia2.jpeg);
+}
+
+#mapa-tres {
+    background: url(imgs/mapas/mapa-rosa1.jpeg);
+}
