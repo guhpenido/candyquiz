@@ -1,0 +1,46 @@
+/*---------------Créditos---------------*/
+
+/*---------------Créditos de outros---------------*/
+
+-----------Créditos visuais:-----------
+
+Todos os personagens foram retirados do filme Detona Ralph, uma distribuição de Walt Disney & Studios Motion Pictures.
+
+Os backgrouds foram retirados de site free copyrights para usos sem fins lucrativos (uso pessoal). WallpaperAccess © 2022.
+
+Os mapas foram encontrados em: https://www.artstation.com/akrabova / https://www.artstation.com/artwork/PLNLy, e são criações da artista Anna Akrabova.
+
+Alguns elementos (doces) foram retirados do jogo CandyCrush, cujo direitos autorais pertecem a King Digital Entertainment plc.
+
+O video background de algumas páginas foi retirado de https://www.freepik.com/free-vector/colorful-candy-land-background_2306397.htm#page=1&query=Candy%20land&position=8.
+
+Os efeitos sonoros foram retirados do site MyInstants, © Myinstants since 2010 - Icons made by Roundicons and Freepik from www.flaticon.com.
+
+O arquivo trofeu.png foi retirado de: https://www.subpng.com/png-13jn7t/.
+O arquivo image-1.png foi retirado de: http://deblogger.com.br/criando-uma-pagina-html/
+
+Outras imagens ou foram modificadas ou possuem direitos autorais liberados para uso não comercial.
+
+
+-----------Créditos de códigos-----------
+
+O arquivo vanilla-tilt.js (utilizado para animar as cartas em mapa.html) foi retirado de: https://github.com/gijsroge/tilt.js, cujo autor é: Sergiu Șandor (micku7zu).
+
+O arquivo script_display.js (utilizado para deixar a página em tela cheia quando clicada) foi retirado e adaptado de: https://pt.stackoverflow.com/questions/1855/existe-alguma-maneira-de-ativar-a-tela-cheia-do-navegador-com-javascript.
+
+A função "falar", no arquivo jogo.js, foi retirado de https://pt.stackoverflow.com/questions/300327/navegador-falar-para-usu%C3%A1rio-apertar-tecla, e é utilizado para utilizamos a API do Google, que fala as strings.
+
+O arquivo html2canvas.js (utilizado para o usuário conseguir baixar o elemento final), é uma distribuição de uso gratuito, desenvolvido por: Niklas von Hertzen. Copyright (c) 2022 Niklas von Hertzen <https://hertzen.com> *Released under MIT License
+
+/*---------------Créditos dos criadores---------------*/
+
+CandyQuiz, suas páginas, códigos e layout é uma criação de:
+	- Gustavo Marcelo Penido Pereira
+	- Letícia Leonardo Pereira
+	- Lucas Alexandre de Carvalho Silva
+em 31/01/2021, 
+	com destino ao denominado TP2 de LPW, no CEFET-MG, do curso de Informática 1A - BH/2021.
+
+	Os criadores (nós) não permitidos a comercialização e/ou utilização dos nosso códigos sem a devida atribuição de créditos.
+
+/*----------------------------------------------*/

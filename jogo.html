@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_game.css">
+    <link rel="stylesheet" href="style_jogo_perguntas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/937e8004d1.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <title>CandyQuiz - Jogo</title>
+</head>
+
+<body>
+    <audio src="sounds/button.wav" id="audioClick" type="audio/wav"></audio>
+    <audio src="sounds/hover.wav" id="audioHover" type="audio/wav"></audio>
+    <audio src="sounds/resposta-certa.mp3" id="audioAcerto" type="audio/wav"></audio>
+    <audio src="sounds/resposta-errada.mp3" id="audioErro" type="audio/wav"></audio>
+    <audio src="sounds/sound-fail-fallo.mp3" id="audioFail" type="audio/wav"></audio>
+    <div id="container">
+        <div id="mapa">
+            <div id="foto-mapa">
+                <img src="imgs/mapas/mapa-rosa1.jpeg" alt="">
+                <img onmouseover="abreBalaoUm()" onmouseout="fechaBalaoUm()" class="pin" id="pin-um" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoDois()" onmouseout="fechaBalaoDois()" class="pin" id="pin-dois" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoTres()" onmouseout="fechaBalaoTres()" class="pin" id="pin-tres" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoQuatro()" onmouseout="fechaBalaoQuatro()" class="pin" id="pin-quatro" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoCinco()" onmouseout="fechaBalaoCinco()" class="pin" id="pin-cinco" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoSeis()" onmouseout="fechaBalaoSeis()" class="pin" id="pin-seis" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoSete()" onmouseout="fechaBalaoSete()" class="pin" id="pin-sete" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoOito()" onmouseout="fechaBalaoOito()" class="pin" id="pin-oito" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoNove()" onmouseout="fechaBalaoNove()" class="pin" id="pin-nove" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoDez()" onmouseout="fechaBalaoDez()" class="pin" id="pin-dez" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoOnze()" onmouseout="fechaBalaoOnze()" class="pin" id="pin-onze" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoDoze()" onmouseout="fechaBalaoDoze()" class="pin" id="pin-doze" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoTreze()" onmouseout="fechaBalaoTreze()" class="pin" id="pin-treze" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoQuatorze()" onmouseout="fechaBalaoQuatorze()" class="pin" id="pin-quatorze" src="imgs/fases.png" alt="">
+                <img onmouseover="abreBalaoQuinze()" onmouseout="fechaBalaoQuinze()" class="pin" id="pin-quinze" src="imgs/fases.png" alt="">
+                <div class="balao" id="balao-um">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>MATÉRIA 1</h1>
+                </div>
+                <div class="balao" id="balao-dois">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 1</h1>
+                </div>
+                <div class="balao" id="balao-tres">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>MATÉRIA 2</h1>
+                </div>
+                <div class="balao" id="balao-quatro">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 2</h1>
+                </div>
+                <div class="balao" id="balao-cinco">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>MATÉRIA 3</h1>
+                </div>
+                <div class="balao" id="balao-seis">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 3</h1>
+                </div>
+                <div class="balao" id="balao-sete">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>MATÉRIA 4</h1>
+                </div>
+                <div class="balao" id="balao-oito">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 4</h1>
+                </div>
+                <div class="balao" id="balao-nove">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>MATÉRIA 5</h1>
+                </div>
+                <div class="balao" id="balao-dez">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 5</h1>
+                </div>
+                <div class="balao" id="balao-onze">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>MATÉRIA 6</h1>
+                </div>
+                <div class="balao" id="balao-doze">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 6</h1>
+                </div>
+                <div class="balao" id="balao-treze">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>MATÉRIA 7</h1>
+                </div>
+                <div class="balao" id="balao-quatorze">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 7</h1>
+                </div>
+                <div class="balao" id="balao-quinze">
+                    <img src="imgs/caixa-de-texto-remove.png" alt="">
+                    <h1>PERGUNTA 8</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="acertou">
+        <img id="logo-acertou" src="imgs/logo-candy.png" alt="">
+        <img class="animate__animated animate__zoomInUp" id="fogo-um" src="imgs/fogo-de-artificio.gif" alt="">
+        <img class="animate__animated animate__zoomInUp" id="fogo-dois" src="imgs/fogo-de-artificio.gif" alt="">
+        <h1 class="animate__animated animate__zoomInUp">Parabéns! Você acertou!</h1>
+        <h2 class="animate__animated animate__zoomInUp">Level aumentado +1</h2>
+    </div>
+    <div id="perguntas">
+        <div class="materia" id="materia-um">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML</h2>
+            <h3>◉ Estrutura básica do HTML</h3>
+            <p> Essa estrutura é praticamente imutável. Sempre será dessa forma e você sempre começará seu HTML dessa forma.</p>
+            <img src="imgs/image-1.png" alt="estrutura-html">
+            <p>As tags demonstradas na foto podem ser definidas dessa forma:</p>
+            <ul>
+                <li>Definição do documento (doctype)</li>
+                <li>Cabeçalho (head)</li>
+                <li>Corpo (body)</li>
+            </ul>
+            <div onclick="" class="button-materia">
+                <button onclick="fecharModaisEntendido()">Entendido! <i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+
+        <div class="pergunta" id="pergunta-um">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 1</h2>
+            <h3>Qual a representação a tag "head" apresenta no HTML?</h3>
+            <div class="botoes">
+                <button onclick="acertou()" class="botao1" id="respostaCorreta"> Cabeçalho </button>
+                <button onclick="errou()" class="botao2"> Corpo </button>
+                <button onclick="errou()" class="botao3"> Rodapé</button>
+                <button onclick="errou()" class="botao4"> Título da página </button>
+            </div>
+        </div>
+
+        <div class="materia" id="materia-dois">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML</h2>
+            <h3>◉ Títulos e subtítulos</h3>
+            <p> Títulos e subtítulos são elementos extremamente comuns em HTML para vários sites. Esses elementos textuais nos trazem melhor navegação e a apresentação do site. As tags de título sempre têm o h seguido de um número que é o índice de "importância"
+                do título, do h1(título) ao h6 (subtítulo).
+            </p>
+            <div onclick="" class="button-materia">
+                <button onclick="fecharModaisEntendido()">Entendido! <i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+
+        <div class="pergunta" id="pergunta-dois">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 2</h2>
+            <h3>Qual dessas opções representa um subtítulo de nível 3?</h3>
+            <div class="botoes">
+                <button onclick="errou()" class="botao1"> st3 </button>
+                <button onclick="errou()" class="botao2"> t3 </button>
+                <button onclick="acertou()" class="botao3" id="respostaCorreta"> h3 </button>
+                <button onclick="errou()" class="botao4"> p</button></div>
+        </div>
+
+        <div class="materia" id="materia-tres">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML</h2>
+            <h3>◉ Imagens</h3>
+            <p> Para inserir uma imagem no HTML basta utilizar a tag "img" com o atributo src. Ou seja: o atributo src, ou source, vai conter a url da imagem que será inserida.
+            </p>
+            <p>Para inserir uma imagem local, podemos apenas incluir o nome da imagem com sua extensão.</p>
+            <p>A tag img apresenta o atributo alt, que é utilizado para especificar um texto alternativo que é renderizado quando a imagem não é renderizada, ou muitas vezes é utilizado por programas que leêm o conteúdo desse atributo para usuários cegos.
+            </p>
+            <div onclick="" class="button-materia">
+                <button onclick="fecharModaisEntendido()">Entendido! <i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+
+        <div class="pergunta" id="pergunta-tres">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 3</h2>
+            <h3>Como coloca uma imagem no seu html? Considere "img" como abertura e fechamento da tag.</h3>
+            <div class="botoes">
+                <button onclick="errou()" class="botao1"> img "link/caminho" img </button>
+                <button onclick="acertou()" class="botao2" id="respostaCorreta"> img src="link/caminho" </button>
+                <button onclick="errou()" class="botao3"> img src="link/caminho" img </button>
+                <button onclick="errou()" class="botao4"> img scr="link/caminho" </button></div>
+        </div>
+
+        <div class="materia" id="materia-quatro">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML</h2>
+            <h3>◉ Parágrafos</h3>
+            <p> Os parágrafos no HTML são utilizados apenas pela tag "p", que são finalizados após a tag ser fechada com uma barra antes de fechá-la.
+            </p>
+            <p>Os parágrafos apresentam quebra de linha automática.</p>
+            <div onclick="" class="button-materia">
+                <button onclick="fecharModaisEntendido()">Entendido! <i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+
+        <div class="pergunta" id="pergunta-quatro">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 4</h2>
+            <h3>Como realizar uma quebra de linhas no parágrafo?</h3>
+            <div class="botoes">
+                <button onclick="acertou()" class="botao1" id="respostaCorreta"> A tag do parágrafo ja tem quebra de linha automática.</button>
+                <button onclick="errou()" class="botao2"> "/n"</button>
+                <button onclick="errou()" class="botao3"> "\n" </button>
+                <button onclick="errou()" class="botao4"> "/t" </button></div>
+        </div>
+
+        <div class="materia" id="materia-cinco">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML</h2>
+            <h3>◉ Hiperlinks</h3>
+            <p> Os hiperlinks são links básicos criados envolvendo o texto que você quer transformar em um link dentro de um elemento. Ele é utilizado dando-lhe um atributo href, que conterá o endereço da Web para o qual você deseja que o link aponte.
+            </p>
+            <div onclick="" class="button-materia">
+                <button onclick="fecharModaisEntendido()">Entendido! <i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+
+        <div class="pergunta" id="pergunta-cinco">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 5</h2>
+            <h3>Veja o código abaixo: </h3>
+            <h3>a href="https://www.google.com/" a</h3>
+            <h3>Como ficaria o código para aplicar esse link à palavra Google?Considere "a" como abertura e fechamento de tag.</h3>
+            <div class="botoes">
+                <button onclick="errou()" class="botao1"> a Google href="https://www.google.com/"a</button>
+                <button onclick="acertou()" class="botao2" id="respostaCorreta">a href="https://www.google.com/"> Google a</button>
+                <button onclick="errou()" class="botao3"> a href="https://www.google.com/" a Google</button>
+                <button onclick="errou()" class="botao4"> a href="https://www.google.com/" a </button>
+            </div>
+        </div>
+
+        <div class="materia" id="materia-seis">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML</h2>
+            <h3>◉ Divs - Containers de elementos</h3>
+            <p> O elemento de divisão (div) é um container para conteúdos que de certa forma não representa nada. Ele geralmente é utilizado como forma de agrupamento de elementos para serem estilizados de forma conjunta.
+            </p>
+            <div onclick="" class="button-materia">
+                <button onclick="fecharModaisEntendido()">Entendido! <i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+
+        <div class="pergunta" id="pergunta-seis">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 6</h2>
+            <h3>O que é uma div?</h3>
+            <div class="botoes">
+                <button onclick="errou()" class="botao1">Uma tag que realiza divisão de números.</button>
+                <button onclick="errou()" class="botao2">Um atributo da tag body.</button>
+                <button onclick="errou()" class="botao3">Uma tag que divide elementos para serem estilizados de forma distinta e separada.</button>
+                <button onclick="acertou()" class="botao4" id="respostaCorreta">Uma tag que divide elementos para serem estilizados de forma conjunta.</button></div>
+        </div>
+
+        <div class="materia" id="materia-sete">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML</h2>
+            <h3>◉ Classes e ID's</h3>
+            <p> As classes e os ID's são formas de identificar grupos de elementos, para principalmente serem estilizados. Através delas, pode-se atribuir formatação e estilos a elementos.A única diferença entre elas é que as classes podem se atribuir estilos
+                a vários elementos de uma vez, já os ID's, devem ser únicas para cada elemento.
+            </p>
+            <p>Para inseri-los, você deve colocar class="nome-da-classe" (o mesmo para ID) dentro da abertura da tag.Para se referir às classes e ID's em códigos CSS, deve-se utilizar #nome-do-id para ID's, e .nome-da-classe para classes.
+            </p>
+            <div onclick="" class="button-materia">
+                <button onclick="fecharModaisEntendido()">Entendido! <i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+
+        <div class="pergunta" id="pergunta-sete">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 7</h2>
+            <h3>Qual a forma correta de atribuir classes a algum elemento?Considere "p" como abertura e fechamento de tag.</h3>
+            <div class="botoes">
+                <button onclick="errou()" class="botao1">p class="paragrafo1" Texto</button>
+                <button onclick="errou()" class="botao2">p Texto p class="paragrafo1" </button>
+                <button onclick="acertou()" class="botao3" id="respostaCorreta">p class="paragrafo1" Texto p</button>
+                <button onclick="errou()" class="botao4">class="paragrafo1" p Texto p  </button></div>
+        </div>
+
+        <div class="pergunta" id="pergunta-oito">
+            <div onclick="fecharModais()" class="fechar-modal"><i class="far fa-times-circle"></i></div>
+            <h2>HTML - Questão 8</h2>
+            <h3>Como se referir à ID's em CSS?</h3>
+            <div class="botoes">
+                <button onclick="errou()" class="botao1">Utilizando-se . antes do nome do ID.</button>
+                <button onclick="errou()" class="botao2">Utilizando-se ; antes do nome do ID.</button>
+                <button onclick="errou()" class="botao3">Utilizando-se @ antes do nome do ID.</button>
+                <button onclick="acertou()" class="botao4" id="respostaCorreta">Utilizando-se # antes do nome do ID.</button></div>
+        </div>
+
+        <div class="cabecalho">
+            <div class="personagem-topo">
+                <img src="" alt="" id="personagemTopo">
+                <h1 id="nome-topo"></h1>
+                <h2 id="nomePersonagemTopo"></h2>
+                <h3>Lv. <span id="levelTopo"></span></h3>
+                <h3>Erros: <span id="erros"></span>/5 </h3>
+                <i id="trofeu-um" class="fas fa-square"></i> <i id="trofeu-dois" class="fas fa-square"></i> <i id="trofeu-tres" class="fas fa-square"></i> <i id="trofeu-quatro" class="fas fa-square"></i>
+            </div>
+            <div class="sair">
+                <i onmouseenter="hoverSound()" onclick="sairSelecionarPersonagem()" class="fas fa-sign-out-alt"></i>
+            </div>
+        </div>
+    </div>
+    <div onclick="abrirMenu()" class="botaoMenu">
+        <div class="botao-hamburguer">
+            <i id="botaoInferior" class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="menu-inferior">
+        <nav>
+            <ul>
+                <li> <a onmouseenter="hoverSound()" href="index.html">Inicio</a></li>
+                <li><a onmouseenter="hoverSound()" href="menu.html">Menu</a></li>
+                <li><a onmouseenter="hoverSound()" href="personagem.html">Seleção Personagem</a></li>
+                <li><a onmouseenter="hoverSound()" href="mapa.html">Seleção Mapa</a></li>
+                <li><a onmouseenter="hoverSound()" href="jogo.html">Jogo</a></li>
+                <li><a onmouseenter="hoverSound()" href="/creditos.txt" download="creditos_candyquiz">Créditos</a></li>
+                <li><a onmouseenter="hoverSound()" href="criadores.html">Mensagem dos criadores</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+
+    <div class="fim-quiz" id="final-quiz">
+        <img id="trofeuzin" src="imgs/trofeu.png" alt="">
+        <h1 class="animate__animated animate__zoomInUp">Parabéns!</h1>
+        <h2 class="animate__animated animate__zoomInUp">Agora você está pronte para ser um programador HTML!</h2>
+        <button id="reiniciar" onclick="resetar()">Reiniciar! <i class="fas fa-hand-point-right"></i></button>
+        <button id="imprime" onclick="imprimir()">Imprimir resultado! <i class="fas fa-hand-point-right"></i></button>
+    </div>
+    <div class="imprimir" id="download">
+        <img id="logo" src="imgs/Candy.png" alt="">
+        <img id="trofeu" src="imgs/trofeu.png" alt="">
+        <img id="personagemTopo-resumo" src="imgs/personagens/caramelo.png" alt="">
+        <div class="cabecalho-resumo">
+            <div class="personagem-topo-resumo">
+                <div id="em-cima">
+                    <h1 id="nome-topo-resumo"></h1>
+                    <h2 id="nomePersonagemTopo-resumo"></h2>
+                </div>
+                <div id="em-baixo">
+                    <h3>Lv. <span id="levelTopo-resumo"></span></h3>
+                    <h3>Erros: <span id="erros-resumo"></span>/5 </h3>
+                    <i id="trofeu-um-resumo" class="fas fa-square"></i> <i id="trofeu-dois-resumo" class="fas fa-square"></i> <i id="trofeu-tres-resumo" class="fas fa-square"></i> <i id="trofeu-quatro-resumo" class="fas fa-square"></i>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/html2canvas.js"></script>
+        <script src="js/script_display.js "></script>
+        <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+        <script src="js/som.js"></script>
+        <script src="js/jogo.js"></script>
+        <script src="js/menu_inferior.js"></script>
+</body>
+
+</html>

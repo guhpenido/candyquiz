@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_inicio.css">
+    <link rel="stylesheet" href="style_game.css">
+    <script src="https://kit.fontawesome.com/937e8004d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <title>Seleção Mapa - CandyQuiz</title>
+</head>
+
+<body>
+    <div class="tela-mapa" onclick="toggleFullScreen()">
+        <audio src="sounds/button.wav" id="audioClick" type="audio/wav"></audio>
+        <audio src="sounds/hover.wav" id="audioHover" type="audio/wav"></audio>
+        <div class="titulo">
+            <h2>Selecione um mapa 👇</h2>
+        </div>
+        <div class="conteudo-mapa">
+            <div class="retangulo" id="mapa-um" onmouseenter="hoverSound()">
+                <div class="conteudo-retangulo">
+                    <h2>01</h2>
+                    <h3>HTML</h3>
+                    <p>Esse é o primeiro mapa, todas as suas fases serão de matérias e perguntas envolvendo principalmente a linguagem HTML</p>
+                    <a id="jogar-html" onclick="irParaOJogo()" href="#">JOGAR</a>
+                </div>
+            </div>
+            <div class="retangulo" id="mapa-dois" onmouseenter="hoverSound()">
+                <div class="conteudo-retangulo">
+                    <h2>02</h2>
+                    <h3>CSS</h3>
+                    <p>Esse é o segundo mapa, todas as suas fases serão de matérias e perguntas envolvendo principalmente a linguagem CSS</p>
+                    <a href="#">EM BREVE</a>
+                </div>
+            </div>
+            <div class="retangulo" id="mapa-tres" onmouseenter="hoverSound()">
+                <div class="conteudo-retangulo">
+                    <h2>03</h2>
+                    <h3>JavaScript</h3>
+                    <p>Esse é o terceiro e último mapa, todas as suas fases serão de matérias e perguntas envolvendo principalmente a linguagem JavaScript</p>
+                    <a href="#">EM BREVE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cabecalho">
+        <div class="personagem-topo">
+            <img src="" alt="" id="personagemTopo">
+            <h1 id="nome-topo"></h1>
+            <h2 id="nomePersonagemTopo"></h2>
+            <h3>Lv. <span id="levelTopo"></span></h3>
+            <i class="fas fa-square"></i> <i class="fas fa-square"></i> <i class="fas fa-square"></i> <i class="fas fa-square"></i>
+        </div>
+        <div class="sair">
+            <i onmouseenter="hoverSound()" onclick="sairSelecionarPersonagem()" class="fas fa-sign-out-alt"></i>
+        </div>
+    </div>
+    <div onclick="abrirMenu()" class="botaoMenu">
+        <div class="botao-hamburguer">
+            <i id="botaoInferior" class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="menu-inferior">
+        <nav>
+            <ul>
+                <li> <a onmouseenter="hoverSound()" href="index.html">Inicio</a></li>
+                <li><a onmouseenter="hoverSound()" href="menu.html">Menu</a></li>
+                <li><a onmouseenter="hoverSound()" href="personagem.html">Seleção Personagem</a></li>
+                <li><a onmouseenter="hoverSound()" href="mapa.html">Seleção Mapa</a></li>
+                <li><a onmouseenter="hoverSound()" href="/creditos.txt" download="creditos_candyquiz">Créditos</a></li>
+                <li><a onmouseenter="hoverSound()" href="criadores.html">Mensagem dos criadores</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script src="js/som.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="js/menu_inferior.js"></script>
+</body>
+
+</html>

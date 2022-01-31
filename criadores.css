@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+* {
+    font-family: 'Comfortaa', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background: #FF8585;
+    ;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.caixa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    flex-direction: row;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+.cartao {
+    width: 32rem;
+    height: 45rem;
+    background: #FF708F;
+    border-radius: 3rem;
+    margin: 10px;
+}
+
+.cabecalho {
+    height: 15rem;
+    background: #FF8585;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.foto {
+    width: 8rem;
+    height: 8rem;
+    border: .5rem solid #fff;
+    border-radius: 50%;
+    bottom: -4rem;
+    position: absolute;
+    bottom: -4rem;
+}
+
+.conteudo {
+    padding: 6rem 1.5rem 0rem 1.5rem;
+    text-align: center;
+}
+
+.nome {
+    padding-bottom: 2rem;
+}
+
+.texto {
+    padding-bottom: 3rem;
+    font-size: 0.8rem;
+}
+
+.btn {
+    border: none;
+    padding: 1.3rem 3rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #FF8585;
+    border-radius: 2.5rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #FF8585;
+}
+
+.titulo {
+    width: 20%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#cab1 {
+    background: url(imgs/fundo-gustavo.png) no-repeat;
+}
+
+#cab2 {
+    background: url(imgs/fundo-leticia.png)no-repeat;
+}
+
+#cab3 {
+    background: url(imgs/fundo-lucas.png)no-repeat;
+}
+
+.menu-inferior {
+    display: none;
+    transition: all .2s ease-in-out;
+}
+
+.menu-inferior nav {
+    font-family: 'Comfortaa', cursive;
+    max-width: 200px;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(46, 62, 77);
+    position: fixed;
+    left: 5px;
+    bottom: 30px;
+    border: 2px solid rgb(124, 124, 124);
+    padding: 0;
+}
+
+.menu-inferior nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-inferior nav ul li {
+    border: 1px solid rgb(124, 124, 124);
+}
+
+.menu-inferior nav ul li a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+    background-color: rgb(46, 62, 77);
+    text-decoration: none;
+    transition: background .3s;
+    text-transform: uppercase;
+}
+
+.menu-inferior nav ul li a:hover {
+    background-color: rgb(124, 124, 124);
+    color: rgb(46, 62, 77);
+}
+
+.botaoMenu {
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.botao-hamburguer {
+    font-size: 25px;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.botao-hamburguer:hover {
+    color: lightsteelblue
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #CB6DD9 #FF8585;
+}
+
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #FF8585;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #CB6DD9;
+    border-radius: 20px;
+    border: 5px solid #FF8585;
+}

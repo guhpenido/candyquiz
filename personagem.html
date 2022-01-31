@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_inicio.css">
+    <link rel="stylesheet" href="style_game.css">
+    <script src="https://kit.fontawesome.com/937e8004d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <title>Personagem - CandyQuiz</title>
+</head>
+
+<body>
+    <div class="tela-personagem" onclick="toggleFullScreen()">
+        <audio src="sounds/button.wav" id="audioClick" type="audio/wav"></audio>
+        <audio src="sounds/hover.wav" id="audioHover" type="audio/wav"></audio>
+        <div class="personagem">
+            <img src="" alt="" id="personagemCentral">
+        </div>
+        <div class="selecao">
+            <div onmouseenter="hoverSound()" onclick="clickSound()" id="item-a">
+                <img src="imgs/personagens/caramelo-icon.png" alt="">
+            </div>
+            <div onmouseenter="hoverSound()" onclick="clickSound()" id="item-b">
+                <img src="imgs/personagens/chocolate-icon.png" alt="">
+            </div>
+            <div onmouseenter="hoverSound()" onclick="clickSound()" id="item-c">
+                <img src="imgs/personagens/confete-icon.png" alt="">
+            </div>
+            <div onmouseenter="hoverSound()" onclick="clickSound()" id="item-d">
+                <img src="imgs/personagens/cupcake-icon.png" alt="">
+            </div>
+            <div onmouseenter="hoverSound()" onclick="clickSound()" id="item-e">
+                <img src="imgs/personagens/geladinho-icon.png" alt="">
+            </div>
+            <div onmouseenter="hoverSound()" onclick="clickSound()" id="item-f">
+                <img src="imgs/personagens/jujuba-icon.png" alt="">
+            </div>
+            <div onmouseenter="hoverSound()" onclick="clickSound()" id="item-g">
+                <img src="imgs/personagens/raspadinha-icon.png" alt="">
+            </div>
+        </div>
+        <div class="habilidades">
+            <div class="habilidade" id="caramelo">
+                <i class="fas fa-bookmark"></i>
+                <h1>Caramelo</h1>
+                <p>Caramelo é uma menina nascida e criada no Vale do Açucar. Dona de uma doçura contagiante embora todo esse amor possa ser meio grudento as vezes.</p>
+                <h2> ◉ Pode pular uma fase usando sua teia de açucar crocante</h2>
+                <h3>Habilidades meramente ilustrativas</h3>
+            </div>
+            <div class="habilidade" id="chocolate">
+                <i class="fas fa-bookmark"></i>
+                <h1>Chocolate</h1>
+                <p>Chocolate sempre foi amada por todos, a mais famosa de todo o Reino dos Doces. Não há quem não goste dela, mas as vezes sua amargura pode ser perigosa.</p>
+                <h2> ◉ Usando sua popularidade, consegue mostrar 2 dicas</h2>
+                <h3>Habilidades meramente ilustrativas</h3>
+            </div>
+            <div class="habilidade" id="confete">
+                <i class="fas fa-bookmark"></i>
+                <h1>Confete</h1>
+                <p>Confete é a mais divertida, está sempre usando roupas coloridas e possui uma alegria contagiante, pode ser meio traiçoeira as vezes, o que é muito útil para roubar doces por aí.</p>
+                <h2> ◉ Permite diminuir as opções em 50%</h2>
+                <h3>Habilidades meramente ilustrativas</h3>
+            </div>
+            <div class="habilidade" id="cupcake">
+                <i class="fas fa-bookmark"></i>
+                <h1>Cupcake</h1>
+                <p>Cupcake é a mais fofa, faz sucesso em festas de aniversário, seu conteudo pode ser surpreendente.</p>
+                <h2> ◉ Permite explodir uma opção errada com sua bomba de chocolate</h2>
+                <h3>Habilidades meramente ilustrativas</h3>
+            </div>
+            <div class="habilidade" id="geladinho">
+                <i class="fas fa-bookmark"></i>
+                <h1>Geladinho</h1>
+                <p>Geladinho, a princesa dos Alpes de Chantilly, é a mais delicada do reino, porém seu coração de gelo faz com que seja dificil de ser derrubada.</p>
+                <h2> ◉ Permite congelar uma das opções erradas em todas as fases.</h2>
+                <h3>Habilidades meramente ilustrativas</h3>
+            </div>
+            <div class="habilidade" id="jujuba">
+                <i class="fas fa-bookmark"></i>
+                <h1>Jujuba</h1>
+                <p>Jujuba tem muitos amigos, é sempre muito sorridente, sua popularidade faz com que sempre seja confiavel.</p>
+                <h2> ◉ Mostra a resposta correta em uma das fases aleatoriamente</h2>
+                <h3>Habilidades meramente ilustrativas</h3>
+            </div>
+            <div class="habilidade" id="raspadinha">
+                <i class="fas fa-bookmark"></i>
+                <h1>Raspadinha</h1>
+                <p>Raspadinha não fica brava com qualquer coisa, está sempre com a cabeça fria.</p>
+                <h2> ◉ Por ser muito compreensiva, permite que o jogador erre uma fase sem perder pontos</h2>
+                <h3>Habilidades meramente ilustrativas</h3>
+            </div>
+        </div>
+        <div onclick="irParaSelecaoMapa()" class="selecionar">
+            <button id="selecionar">Selecionar <i class="fas fa-hand-point-right"></i></button>
+        </div>
+        <video autoplay muted loop id="video-selecao">
+            <source src="videos/background_selecao.mp4" type="video/mp4"> 
+    </div>
+    <div class="cabecalho">
+        <div class="personagem-topo">
+            <img src="" alt="" id="personagemTopo">
+            <h1 id="nome-topo"></h1>
+            <h2 id="nomePersonagemTopo"></h2>
+            <h3>Lv. <span id="levelTopo"></span></h3>
+            <i class="fas fa-square"></i> <i class="fas fa-square"></i> <i class="fas fa-square"></i> <i class="fas fa-square"></i>
+        </div>
+        <div class="sair">
+            <i onmouseenter="hoverSound()" onclick="sairSelecionarPersonagem()" class="fas fa-sign-out-alt"></i>
+        </div>
+    </div>
+    <div onclick="abrirMenu()" class="botaoMenu">
+        <div class="botao-hamburguer">
+            <i id="botaoInferior" class="fas fa-bars"></i>
+        </div>
+    </div>
+    <div class="menu-inferior">
+        <nav>
+            <ul>
+                <li><a onmouseenter="hoverSound()" href="index.html">Inicio</a></li>
+                <li><a onmouseenter="hoverSound()" href="menu.html">Menu</a></li>
+                <li><a onmouseenter="hoverSound()"href="personagem.html">Seleção Personagem</a></li>
+                <li><a onmouseenter="hoverSound()"href="/creditos.txt" download="creditos_candyquiz">Créditos</a></li>
+                <li><a onmouseenter="hoverSound()"href="criadores.html">Mensagem dos criadores</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script src="js/som.js"></script>
+    <script src="js/personagens.js"></script>
+    <script src="js/menu_inferior.js"></script>
+</body>
+</html>

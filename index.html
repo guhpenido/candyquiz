@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>CandyQuiz</title>
+    <link rel="stylesheet" href="style_inicio.css">
+    <link rel="stylesheet" href="style_game.css">
+    <script src="https://kit.fontawesome.com/937e8004d1.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+</head>
+
+<body>
+    <div class="home">
+        <nav>
+            <div class="barra">
+                <div class="logo"><img src="imgs/Candy.png" alt="LOGO DO PROJETO"><a href="index.html">CandyQuiz</a></div>
+                <div class="redes">
+                    <a href="https://linktr.ee/candyquiz" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://linktr.ee/candyquiz" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://linktr.ee/candyquiz" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/guhpenido/candyquiz" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </nav>
+        <section class="inicio" id="inicio">
+            <div class="conteudo-inicio">
+                <div class="texto">
+                    <div class="texto-um">Olá, bem-vind@</div>
+                    <div class="texto-dois">ao CandyQuiz!</div>
+                    <div class="texto-tres">Um desafio doce</div>
+                    <div class="texto-quatro">Divirta-se!</div>
+                </div>
+                <div class="button">
+                    <button onclick="abrirModalUm()" id="play"><i class="fas fa-play"></i> Vamos Jogar!</button>
+                </div>
+            </div>
+        </section>
+        <div class="modal-um">
+            <div onclick="fecharModalUm()" onclick="armazenarNome()" class="fechar-modal-um"><i class="far fa-times-circle"></i></div>
+            <label for="nome-input">Qual seu nome?<br></label>
+            <input id="nome-input" type="text" required placeholder=".......">
+            <div onclick="abrirModalDois()" class="button-modal-um">
+                <button> Próximo <i class="fas fa-hand-point-right"></i></button>
+            </div>
+
+        </div>
+        <div class="modal-dois">
+            <div onclick="fecharModalDois()" class="fechar-modal-dois"><i class="far fa-times-circle"></i></div>
+            <div class="desktop">
+                <h1>
+                    Olá <b><span id="nome-destkop"></span></b>, bem vind@ ao CandyQuiz!
+                </h1>
+                <p>
+                    Para melhor experiência nós aconselhamos à utilizar o nosso jogo no modo <b>tela cheia</b>, ao pressionar o botão "Entendido!" abaixo, você será redirecionado à página inicial do jogo, e o seu navegador deve ser colocado <b>automaticamente</b>                    no modo tela cheia quando você clicar em qualquer lugar da tela.<br> Para sair do modo tela cheia basta apertar a tecla <b>ESC</b>.
+                </p>
+            </div>
+            <div class="mobile">
+                <h1>
+                    Olá <b><span id="nome-mobile"></span></b>, bem vind@ ao CandyQuiz!
+                </h1>
+                <p>
+                    Para melhor experiência em nosso jogo, aconselhamos à utiliza-lo com o dispositivo na horizontal ("deitado"), por isso, após clicar no botão de <b>"Entendido!"</b>, pedimos para que ative a rotação automática e vire o dispositivo.
+                </p>
+                <img src="imgs/virarparahorizontal.gif" alt="GIF demonstrando um celular virando para a horizontal.">
+            </div>
+
+            <div onclick="irParaMenu()" class="button-modal-dois">
+                <button>Entendido!<i class="fas fa-hand-point-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script src="js/som.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

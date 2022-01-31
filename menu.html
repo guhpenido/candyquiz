@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_inicio.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="style_game.css">
+    <script src="https://kit.fontawesome.com/937e8004d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <title>Candy Quiz - Menu</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="videoBackground">
+            <source src="videos/background_selecao.mp4" type="video/mp4"> 
+        </video>
+    <div class="tela-menu" onclick="toggleFullScreen()">
+        <i class="fas fa-volume-mute fa-2x" id="som"></i>
+        <audio src="sounds/button.wav" id="audioClick" type="audio/wav"></audio>
+        <audio src="sounds/hover.wav" id="audioHover" type="audio/wav"></audio>
+        <div class="menu">
+            <h1>Candy-Quiz</h1>
+            <h3>A WEB GAME</h3>
+            <ul>
+                <li><a onclick="selecionarPersonagem()" href="#">Jogar</a></li>
+                <li><a href="/creditos.txt" download="creditos_candyquiz">Créditos</a></li>
+                <li><a href="https://github.com/guhpenido/candyquiz">Código Fonte</a></li>
+                <li><a onclick="irParaTelaInicial()" href="#">Sair</a></li>
+            </ul>
+        </div>
+        <div onclick="abrirMenu()" class="botaoMenu">
+            <div class="botao-hamburguer">
+                <i id="botaoInferior" class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="menu-inferior">
+            <nav>
+                <ul>
+                    <li> <a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="/creditos.txt" download="creditos_candyquiz">Créditos</a></li>
+                    <li><a href="criadores.html">Mensagem dos criadores</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/script_display.js "></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script src="js/som.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/menu_inferior.js"></script>
+</body>
+
+</html>
