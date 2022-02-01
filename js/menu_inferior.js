@@ -17,3 +17,6 @@ function abrirMenu() {
 
     }
 }
+function redes(){
+    window.location = "https://linktr.ee/candyquiz";
+}
